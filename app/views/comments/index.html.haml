@@ -1,1 +1,2 @@
-= react_component('CommentBox', nil, {prerender: true})
+/ Data to react components must be in JSON format
+= react_component('CommentBox', {:presenter => @presenter.to_json}, {prerender: true})
