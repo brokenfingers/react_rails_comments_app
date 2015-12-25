@@ -1,3 +1,10 @@
 == README
 
 Sample React Application created by following an online tutorial. This touches the basics of React such as components, rendering and event handlers.
+
+The application allows any user to post a comment by providing a name and content. UI is rendered using React components and the hierarchy is as follows:
+
+* CommentBox
+  * CommentList
+    * Comment
+  * CommentForm
