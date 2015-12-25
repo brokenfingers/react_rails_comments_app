@@ -4,7 +4,6 @@ class CommentsController < ApplicationController
       :comments => Comment.last(5),
       :form => {
         :action => comments_path,
-        :csrf_params => request_forgery_protection_token,
         :csrf_token => form_authenticity_token
       }
     }
