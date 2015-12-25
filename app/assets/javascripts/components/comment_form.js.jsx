@@ -1,4 +1,6 @@
 var CommentForm = React.createClass({
+  // Since ref is not recommended to do this in the same way as using ref would be to use 
+  // csrf token and params as CommentForm state
   getInitialState: function() {
     return ({
       author: '',
@@ -28,7 +30,8 @@ var CommentForm = React.createClass({
     this.props.onCommentSubmit(formData, this.props.form.action)
 
     // Reset form fields
-    this.setState({author:'', content:''});
+    this.refs.author.getDOMNode().value = "";
+    this.refs.content.getDOMNode().value = "";this.setState({author:'', content:''});
   },
 
   render: function() {
